@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { BaseEntity } from '@shared/base.entity';
-import { User } from './user.entity';
+import { User } from '@modules/user/user.entity';
 
 export enum PaymentAction {
   Debit = 'debit',

@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany } from 'typeorm';
 import { BaseEntity } from '@shared/base.entity';
-import { PaymentHistory } from './payment-history.entity';
+import { PaymentHistory } from '@modules/user/payment-history.entity';
 
 @Entity({ name: 'users' })
 export class User extends BaseEntity {
