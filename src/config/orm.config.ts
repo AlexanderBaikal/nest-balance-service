@@ -1,8 +1,8 @@
 import { ConfigService } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
-import { User } from '../modules/user/user.entity';
-import { PaymentHistory } from '../modules/user/payment-history.entity';
-import { InitSchema1700840000000 } from '../database/migrations/1700840000000-InitSchema';
+import { User } from '@modules/user/user.entity';
+import { PaymentHistory } from '@modules/user/payment-history.entity';
+import { InitSchema1700840000000 } from '@database/migrations/1700840000000-InitSchema';
 
 export const typeOrmConfig = (configService: ConfigService): DataSourceOptions => {
   const db = configService.get('database');

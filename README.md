@@ -54,6 +54,18 @@ Includes a migration to create the schema and seed user `id=1`.
   docker compose run --rm api npm run migration:run
   ```
 
+## Tests
+
+Jest + @nestjs/testing examples are included:
+- Unit tests for service (`src/modules/user/user.service.spec.ts`) mocking cache and balance repo.
+- Unit tests for controller (`src/modules/user/user.controller.spec.ts`) mocking service.
+- Mocked API-style test with supertest (`test/app.e2e-spec.ts`).
+
+Run after installing dev deps:
+```bash
+npm test
+```
+
 ## DB schema (example)
 
 ```sql
@@ -106,4 +118,4 @@ Response:
 
 ## Possible improvements
 
-- Add generated TypeORM migrations, integration tests, and Redis for cache.
+- Redis for cache.
